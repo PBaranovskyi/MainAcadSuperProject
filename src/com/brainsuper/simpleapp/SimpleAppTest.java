@@ -45,6 +45,12 @@ public class SimpleAppTest {
             System.out.println("Bigger");
         }
 
+        if ("сыровец".compareTo("Сыровец") > 0) {
+            System.out.println("сыровец Bigger than Сыровец");
+        }
+
+
+
         System.out.println("charSymbolIntValue = " +charSymbolInt);
         System.out.println(Integer.valueOf(charSymbol1));
 
