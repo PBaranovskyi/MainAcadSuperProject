@@ -1,4 +1,4 @@
-package com.brainsuper.simpleapp;
+package brainsuper.simpleapp;
 
 /**
  * Created by citsym on 14.01.17.
@@ -35,11 +35,8 @@ public class SimpleAppTest {
 
         double someDouble = 11.7;
 
-
-
         char charSymbolInt = 20_000;
         char charSymbol1 = '両';
-
 
         if (charSymbol1 > charSymbolInt) {
             System.out.println("Bigger");
@@ -48,7 +45,6 @@ public class SimpleAppTest {
         if ("сыровец".compareTo("Сыровец") > 0) {
             System.out.println("сыровец Bigger than Сыровец");
         }
-
 
 
         System.out.println("charSymbolIntValue = " +charSymbolInt);
