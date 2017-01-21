@@ -1,4 +1,4 @@
-package brainsuper.simpleapp;
+package brainsuper.practice1.simpleapp;
 
 import java.util.Arrays;
 
@@ -6,13 +6,17 @@ import java.util.Arrays;
  * Created by citsym on 15.01.17.
  */
 public class UseToString {
+
+
     public static void main(String[] args) {
 
-        int[] array = getArray(4);
+        int[] arrayMain = getArray(10);
 
-        if (array != null && array[0] ==4) {
-            System.out.println(Arrays.toString(array));
+
+        if (arrayMain != null && arrayMain[0] ==4) {
+            System.out.println(Arrays.toString(arrayMain));
         }
+
 
         System.out.println(TypesOfData.ALIAS_VALUE);
 

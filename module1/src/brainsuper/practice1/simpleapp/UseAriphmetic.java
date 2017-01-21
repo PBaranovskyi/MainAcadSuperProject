@@ -1,4 +1,4 @@
-package brainsuper.simpleapp;
+package brainsuper.practice1.simpleapp;
 
 /**
  * Created by citsym on 15.01.17.

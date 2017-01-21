@@ -1,4 +1,4 @@
-package brainsuper.house;
+package brainsuper.practice1.house;
 
 /**
  * Created by citsym on 15.01.17.
