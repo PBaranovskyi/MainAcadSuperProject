@@ -21,11 +21,20 @@ public class UseLoops {
 //        } while (true);
 
 
-        for (int j = 10, i = 0; i < j; i = i + 2, j++) {
+        for (int j = 20, i = 0; i <= j; i = i + 3, j++) {
+
+            if (j == 28){
+                System.exit(1);
+//                i = j/0;
+                System.out.println("continue skipping itteration");
+                continue;
+            }
 
             String name = "Vasya";
 
             System.out.println(name + " knows " + "J =" + j + " i = " + i);
+
+
 
         }
 

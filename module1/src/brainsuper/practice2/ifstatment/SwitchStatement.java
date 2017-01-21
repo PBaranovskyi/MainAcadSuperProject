@@ -8,19 +8,23 @@ public class SwitchStatement {
     public static void main(String[] args) {
         int month = 5;
 
+        String stringMonth;
+
         if (month == 1) {
-            System.out.println("Январь");
+            stringMonth = "Январь";
         } else if (month == 2) {
-            System.out.println("Февраль");
+            stringMonth = "Февраль";
         } else if (month == 3) {
-            System.out.println("Март");
+            stringMonth = "Март";
         } else if (month == 4) {
-            System.out.println("Апрель");
+            stringMonth = "Апрель";
         } else if (month <= 12) {
-            System.out.println("Какой - то другой месяц");
+            stringMonth = "Какой - то другой месяц";
         } else {
-            System.out.println("Некорректный ввод");
+            stringMonth = "Некорректный ввод";
         }
+
+        System.out.println(stringMonth);
 
 
         switch (month) {
@@ -62,9 +66,6 @@ public class SwitchStatement {
             default:
                 System.out.println("Некорректный ввод");
         }
-
-
-
 
 
     }
