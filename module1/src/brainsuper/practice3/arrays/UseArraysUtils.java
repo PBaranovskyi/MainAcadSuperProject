@@ -1,10 +1,6 @@
 package brainsuper.practice3.arrays;
 
-import sun.jvm.hotspot.debugger.cdbg.Sym;
-
-import java.lang.reflect.Array;
 import java.util.Arrays;
-import java.util.Random;
 
 /**
  * Created by citsym on 22.01.17.
@@ -118,6 +114,8 @@ public class UseArraysUtils {
         newStrings[newStrings.length-1] = null;
 
         System.out.println("New array after delete" + Arrays.toString(newStrings));
+
+
 
 
 

@@ -1,11 +1,13 @@
 package brainsuper.practice3.arrays;
 
-import java.util.Arrays;
-
 /**
  * Created by citsym on 22.01.17.
  */
 public class UseArrays {
+
+    public UseArrays(int param){
+        System.out.println(param);
+    }
 
     public static void main(String[] args) {
 
