@@ -10,6 +10,7 @@ public class Car {
     public int year = 1997;
     private String color;
     private int oilSpend = 10;
+    private String condition = "A";
 
 
     public Car(int currentSpeed){
@@ -63,5 +64,11 @@ public class Car {
         this.color = color;
     }
 
+    public void setCondition(String condition) {
+        this.condition = condition;
+    }
 
+    public String getCondition() {
+        return condition;
+    }
 }

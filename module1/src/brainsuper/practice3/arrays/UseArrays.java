@@ -11,7 +11,7 @@ public class UseArrays {
 
     public static void main(String[] args) {
 
-        int[] arr = new int[10];
+        int[] arr = new int[100];
 
 
 //        System.out.println(args[0]);

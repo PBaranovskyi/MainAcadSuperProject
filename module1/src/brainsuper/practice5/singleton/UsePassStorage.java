@@ -15,7 +15,5 @@ public class UsePassStorage {
         System.out.println(PasswordStorage.PASSWORD_STORAGE_ISTANCE.getPasswordArray().length);
 
 
-
-
     }
 }

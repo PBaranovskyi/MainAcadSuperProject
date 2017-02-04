@@ -23,8 +23,21 @@ public class Matrix {
             }
             System.out.println();
         }
+
+        processMatrix(matrix);
+
     }
 
+    private static void processMatrix(int[][] matrix) {
+
+        for (int[] ints : matrix) {
+            for (int anInt : ints) {
+                System.out.print(anInt + " ");
+            }
+            System.out.println();
+        }
+
+    }
 
 
 }
