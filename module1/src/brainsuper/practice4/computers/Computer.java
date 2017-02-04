@@ -5,26 +5,35 @@ package brainsuper.practice4.computers;
  */
 public class Computer {
 
+    public static int numberOfComputers = 0;
+
     private String manufacturer;
     private int serialNumber;
     private float price;
     private int quantityCPU;
     private int frequencyCPU;
 
+    {
+        System.out.println("CVariables defined: " + serialNumber +" " + manufacturer);
+    }
+
     public Computer(String manufacturer, int serialNumber, int quantityCPU, int frequencyCPU) {
         this.manufacturer = manufacturer;
         this.serialNumber = serialNumber;
         this.quantityCPU = quantityCPU;
         this.frequencyCPU = frequencyCPU;
+        System.out.println("Constructor is running "+ serialNumber +" " + manufacturer);
     }
 
 
     public Computer(int frequencyCPU, int quantityCPU, int price, int serialNumber, String manufacturer) {
-        this.frequencyCPU = frequencyCPU;
-        this.quantityCPU = quantityCPU;
+        this(manufacturer, serialNumber, quantityCPU, frequencyCPU);
         this.price = price;
-        this.serialNumber = serialNumber;
-        this.manufacturer = manufacturer;
+    }
+
+    public void view (){
+        System.out.println("Производитель: " + getManufacturer() + ", Серийный номер: " + getSerialNumber()+
+                ", цена: " + getPrice() + ", кол-во: " + getQuantityCPU()+ ", частота " + getFrequencyCPU());
     }
 
     public String getManufacturer() {
@@ -65,5 +74,16 @@ public class Computer {
 
     public void setFrequencyCPU(int frequencyCPU) {
         this.frequencyCPU = frequencyCPU;
+    }
+
+    @Override
+    public String toString() {
+        return "Computer{" +
+                "manufacturer='" + manufacturer + '\'' +
+                ", serialNumber=" + serialNumber +
+                ", price=" + price +
+                ", quantityCPU=" + quantityCPU +
+                ", frequencyCPU=" + frequencyCPU +
+                '}';
     }
 }

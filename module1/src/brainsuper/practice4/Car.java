@@ -8,11 +8,12 @@ public class Car {
     private int maxSpeed = 100;
     private int currentSpeed = 0;
     public int year = 1997;
-    private String color  = "red";
+    private String color;
     private int oilSpend = 10;
 
 
     public Car(int currentSpeed){
+        this(currentSpeed, "red");
         this.currentSpeed = currentSpeed;
     }
 
