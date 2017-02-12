@@ -3,7 +3,7 @@ package brainsuper.practice7;
 /**
  * Created by citsym on 04.02.17.
  */
-class Phone {
+public class Phone {
 
     boolean tested;
 //    static int i; // 0

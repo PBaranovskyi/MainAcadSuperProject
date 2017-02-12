@@ -1,4 +1,4 @@
-package brainsuper.practice3.arrays;
+package brainsuper.arrays;
 
 import java.util.Arrays;
 

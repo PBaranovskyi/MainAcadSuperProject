@@ -1,6 +1,6 @@
-package brainsuper.practice5.singleton;
+package brainsuper.singleton;
 
-import java.util.Arrays;
+import static java.util.Arrays.copyOf;
 
 /**
  * Created by citsym on 29.01.17.
@@ -12,11 +12,11 @@ public class PasswordStorage {
     String[] passwordArray = new String[0];
 
     public  String[] getPasswordArray() {
-        return Arrays.copyOf(passwordArray, passwordArray.length);
+        return copyOf(passwordArray, passwordArray.length);
     }
 
     public void addPassword(String pass){
-        passwordArray = Arrays.copyOf(passwordArray, passwordArray.length+1);
+        passwordArray = copyOf(passwordArray, passwordArray.length+1);
         passwordArray[passwordArray.length-1] = pass;
     }
 

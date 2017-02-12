@@ -1,4 +1,4 @@
-package brainsuper.practice3.arrays;
+package brainsuper.arrays;
 
 /**
  * Created by citsym on 22.01.17.

@@ -5,12 +5,14 @@ package brainsuper.practice4;
  */
 public class Car {
 
-    private int maxSpeed = 100;
+    private String driver = "Pasha";
+    private Integer maxSpeed = 100;
     private int currentSpeed = 0;
     public int year = 1997;
     private String color;
     private int oilSpend = 10;
     private String condition = "A";
+    private String[] passengers = {"Vasya", "Petya"};
 
 
     public Car(int currentSpeed){
@@ -70,5 +72,21 @@ public class Car {
 
     public String getCondition() {
         return condition;
+    }
+
+    public String[] getPassengers() {
+        return passengers;
+    }
+
+    public void setPassengers(String[] passengers) {
+        this.passengers = passengers;
+    }
+
+    public String getDriver() {
+        return driver;
+    }
+
+    public void setDriver(String driver) {
+        this.driver = driver;
     }
 }
