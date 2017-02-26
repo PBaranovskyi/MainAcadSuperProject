@@ -1,10 +1,14 @@
-package brainsuper.practice10.clone;
+package brainsuper.practice11.vehicle;
 
 /**
  * Created by citsym on 12.02.17.
  */
 public class Engine implements Cloneable {
     double value = 1.6;
+
+    public Engine(int value) {
+        this.value = value;
+    }
 
     @Override
     protected Object clone() throws CloneNotSupportedException {

@@ -36,7 +36,7 @@ public class UseMyCars {
         System.out.println("Family car " + familyCar.getCondition());
 
 
-        String test = "Test";
+        String test = "Main";
 
         test = "Changed";
 
