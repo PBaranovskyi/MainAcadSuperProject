@@ -5,7 +5,7 @@ import brainsuper.practice10.animals.birds.Bird;
 import brainsuper.practice10.animals.birds.Owl;
 import brainsuper.practice10.animals.mammals.Elephant;
 
-import java.util.Arrays;
+import static brainsuper.practice12.worldWithoutPolymorfizm.ArraysUtils.addElementToArray;
 
 /**
  * Created by citsym on 12.02.17.
@@ -17,25 +17,25 @@ public class Zoo {
 
         Animal[] animals = new Animal[0];
 
-        animals = addAnimalToTheZoo(animals, new Animal());
+        animals = addElementToArray(animals, new Animal());
 
         feedAllAnimals(animals);
 
-        animals = addAnimalToTheZoo(animals, new Animal());
+        animals = addElementToArray(animals, new Animal());
 
         feedAllAnimals(animals);
 
-        animals = addAnimalToTheZoo(animals, new Elephant());
-        animals = addAnimalToTheZoo(animals, new Elephant());
-        animals = addAnimalToTheZoo(animals, new Elephant());
-        animals = addAnimalToTheZoo(animals, new Elephant());
-        animals = addAnimalToTheZoo(animals, new Elephant());
-        animals = addAnimalToTheZoo(animals, new Elephant());
-        animals = addAnimalToTheZoo(animals, new Bird());
-        animals = addAnimalToTheZoo(animals, new Bird());
-        animals = addAnimalToTheZoo(animals, new Bird());
-        animals = addAnimalToTheZoo(animals, new Owl());
-        animals = addAnimalToTheZoo(animals, new Bird());
+        animals = addElementToArray(animals, new Elephant());
+        animals = addElementToArray(animals, new Elephant());
+        animals = addElementToArray(animals, new Elephant());
+        animals = addElementToArray(animals, new Elephant());
+        animals = addElementToArray(animals, new Elephant());
+        animals = addElementToArray(animals, new Elephant());
+        animals = addElementToArray(animals, new Bird());
+        animals = addElementToArray(animals, new Bird());
+        animals = addElementToArray(animals, new Bird());
+        animals = addElementToArray(animals, new Owl());
+        animals = addElementToArray(animals, new Bird());
 
         feedAllAnimals(animals);
 
@@ -49,13 +49,7 @@ public class Zoo {
 
     }
 
-    public static Animal[] addAnimalToTheZoo(Animal[] animals, Animal newAnimal) {
-        Animal[] newAnimalsArray = Arrays.copyOf(animals, animals.length + 1);
 
-        newAnimalsArray[newAnimalsArray.length - 1] = newAnimal;
-
-        return newAnimalsArray;
-    }
 
     private static void feedAllAnimals(Animal[] animals) {
         System.out.println("=====================");

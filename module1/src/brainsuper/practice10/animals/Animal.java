@@ -1,6 +1,6 @@
 package brainsuper.practice10.animals;
 
-import brainsuper.practice10.Zoo;
+import static brainsuper.practice12.worldWithoutPolymorfizm.ArraysUtils.addElementToArray;
 
 /**
  * Created by citsym on 12.02.17.
@@ -11,9 +11,10 @@ public class Animal {
 
     private String foodName = "food";
 
+    protected String simpleName = getClass().getSimpleName();
 
     public Animal() {
-        animals = Zoo.addAnimalToTheZoo(animals, this);
+        animals = addElementToArray(animals, this);
     }
 
     public void feed() {
@@ -21,10 +22,11 @@ public class Animal {
     }
 
     protected void feed(int animalNumber) {
+
         if (animalNumber == 0) {
-            System.out.println(getClass().getSimpleName() + " eats " + getFoodName());
+            System.out.println(simpleName + " eats " + getFoodName());
         } else {
-            System.out.println(getClass().getSimpleName() + animalNumber + " eats " + getFoodName());
+            System.out.println(simpleName + animalNumber + " eats " + getFoodName());
         }
     }
 
@@ -40,4 +42,5 @@ public class Animal {
     public static Animal[] getAnimals() {
         return animals;
     }
+
 }

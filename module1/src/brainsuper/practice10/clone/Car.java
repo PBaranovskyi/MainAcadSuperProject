@@ -11,7 +11,7 @@ import java.util.Date;
 public class Car implements Cloneable {
     protected int maxSpeed;
     protected Date manufDate;
-    Engine engine = new Engine();
+    Engine engine = new Engine(2);
 
     public Car(Date manufDate, int maxSpeed) {
         this.manufDate = manufDate;
