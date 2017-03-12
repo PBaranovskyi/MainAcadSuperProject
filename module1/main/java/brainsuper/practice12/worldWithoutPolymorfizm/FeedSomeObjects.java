@@ -1,9 +1,26 @@
 package brainsuper.practice12.worldWithoutPolymorfizm;
 
+import java.util.Arrays;
+
 /**
  * Created by citsym on 26.02.17.
  */
 public class FeedSomeObjects {
+
+
+    private int someXLiters = 10;
+
+    private CanBeFunWith cat = new CanBeFunWith() {
+        @Override
+        public void drinkABeer() {
+            System.out.println("Cat drinks el " + someXLiters);
+        }
+
+        @Override
+        public void tellAJoke() {
+            System.out.println("May may joke");
+        }
+    };
 
     public static void main(String[] args) {
 
@@ -32,7 +49,7 @@ public class FeedSomeObjects {
         restorant(visitors);
 
         System.out.println("===================");
-        Eater[] eaters = new Eater[5];
+        final Eater[] eaters = new Eater[6];
 
         eaters[0] = robot;
         eaters[1] = phiona;
@@ -42,12 +59,30 @@ public class FeedSomeObjects {
 
         restorant(eaters);
 
+        CanBeFunWith cat = new CanBeFunWith() {
+
+            @Override
+            public void drinkABeer() {
+                System.out.println("Cat drinks el " + Arrays.toString(eaters));
+            }
+
+            @Override
+            public void tellAJoke() {
+                System.out.println("May may joke");
+            }
+        };
+
+        fun(cat);
+
+
     }
 
-    private static void fun(CanBeFunWith someObj) {
+    private static CanBeFunWith fun(CanBeFunWith someObj) {
 
         someObj.drinkABeer();
         someObj.tellAJoke();
+
+        return someObj;
 
     }
 
@@ -56,7 +91,7 @@ public class FeedSomeObjects {
         for (Eater eater : eaters) {
             eater.feed();
 
-            if (eater instanceof CanBeFunWith){
+            if (eater instanceof CanBeFunWith) {
                 fun((CanBeFunWith) eater);
             }
         }

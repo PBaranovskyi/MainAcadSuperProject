@@ -17,16 +17,19 @@ public class Zoo {
 
         Animal[] animals = new Animal[0];
 
-        animals = addElementToArray(animals, new Animal());
+//        animals = addElementToArray(animals, new Animal());
 
-        feedAllAnimals(animals);
+//        feedAllAnimals(animals);
+//
+//        animals = addElementToArray(animals, new Animal());
+//
+//        feedAllAnimals(animals);
 
-        animals = addElementToArray(animals, new Animal());
+        Elephant elephantNikolas = new Elephant();
+        elephantNikolas.getSkin().setColor("Blue");
+        animals = addElementToArray(animals, elephantNikolas);
 
-        feedAllAnimals(animals);
-
-        animals = addElementToArray(animals, new Elephant());
-        animals = addElementToArray(animals, new Elephant());
+        animals = addElementToArray(animals, new Elephant(new Animal.Skin("Blue", 10)));
         animals = addElementToArray(animals, new Elephant());
         animals = addElementToArray(animals, new Elephant());
         animals = addElementToArray(animals, new Elephant());
@@ -35,10 +38,20 @@ public class Zoo {
         animals = addElementToArray(animals, new Bird());
         animals = addElementToArray(animals, new Bird());
         animals = addElementToArray(animals, new Owl());
-        animals = addElementToArray(animals, new Bird());
+        Bird gusKesha = new Bird(40);
+        animals = addElementToArray(animals, gusKesha);
 
         feedAllAnimals(animals);
 
+
+        Bird.Feather featherOfKesha = gusKesha.new Feather("gray", 10, 100);
+
+
+        System.out.println("Feather count calc: " + featherOfKesha.calculateFeatherCount());
+
+        gusKesha.setSeedsNumber(100);
+
+        System.out.println("Feather count calc after change: " + featherOfKesha.calculateFeatherCount());
 
 //        new Elephant();
 //        new Owl();

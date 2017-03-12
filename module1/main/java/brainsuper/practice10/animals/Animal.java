@@ -5,11 +5,13 @@ import static brainsuper.practice12.worldWithoutPolymorfizm.ArraysUtils.addEleme
 /**
  * Created by citsym on 12.02.17.
  */
-public class Animal {
+public abstract class Animal {
 
     private static Animal[] animals = new Animal[0];
 
     private String foodName = "food";
+
+    protected Skin skin = new Skin();
 
     protected String simpleName = getClass().getSimpleName();
 
@@ -41,6 +43,49 @@ public class Animal {
 
     public static Animal[] getAnimals() {
         return animals;
+    }
+
+
+    public Skin getSkin() {
+        return skin;
+    }
+
+    public static class Skin {
+        private String color;
+        private int area;
+
+        public Skin() {
+        }
+
+        public Skin(String color, int area) {
+            this.color = color;
+            this.area = area;
+        }
+
+        public String getColor() {
+            return color;
+        }
+
+        public void setColor(String color) {
+            this.color = color;
+        }
+
+        public int getArea() {
+            return area;
+        }
+
+        public void setArea(int area) {
+            this.area = area;
+        }
+
+
+        @Override
+        public String toString() {
+            return "Skin{" +
+                    "color='" + color + '\'' +
+                    ", area=" + area +
+                    '}';
+        }
     }
 
 }

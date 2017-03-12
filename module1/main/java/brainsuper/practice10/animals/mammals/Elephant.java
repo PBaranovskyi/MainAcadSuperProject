@@ -16,6 +16,11 @@ public class Elephant extends Mammal {
     }
 
 
+    public Elephant(Skin skin) {
+        this.skin = skin;
+    }
+
+
     @Override
     public void feed() {
         super.feed(elephantNumber);
