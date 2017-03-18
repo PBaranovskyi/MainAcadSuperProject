@@ -40,7 +40,6 @@ public class Bird extends Animal{
             this.featherCount = featherCount;
         }
 
-
         public int calculateFeatherCount(){
             featherCount = seedsNumber * 1000;
             return featherCount;
