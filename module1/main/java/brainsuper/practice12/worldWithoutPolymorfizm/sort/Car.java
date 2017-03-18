@@ -39,4 +39,23 @@ public class Car implements Comparable<Car> {
         }
         return 0;
     }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Car car = (Car) o;
+
+        if (getMaxSpeed() != car.getMaxSpeed()) return false;
+        return getYearOfManufacture() == car.getYearOfManufacture();
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getMaxSpeed();
+        result = 31 * result + getYearOfManufacture();
+        return result;
+    }
 }
