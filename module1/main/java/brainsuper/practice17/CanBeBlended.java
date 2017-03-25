@@ -6,4 +6,5 @@ package brainsuper.practice17;
 public interface CanBeBlended<Z> {
 
     Z blend();
+
 }
