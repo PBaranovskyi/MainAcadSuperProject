@@ -11,14 +11,14 @@ public class UseThreads {
         long before = System.currentTimeMillis();
 
         System.out.println("main method start");
-        MyTestRunnable run1 = new MyTestRunnable();
-        Thread thr1 = new Thread(run1);
-        Thread thr2 = new Thread(run1);
+        MyTestRunnable run1 = new MyTestRunnable(1);
+//        Thread thr1 = new Thread(run1);
+//        Thread thr2 = new Thread(run1);
         System.out.println("thread created");
-        thr1.start();
-        thr1.join();
-        thr2.start();
-        thr2.join();
+//        thr1.start();
+//        thr1.join();
+//        thr2.start();
+//        thr2.join();
 //        run1.run();
 //        run1.run();
         System.out.println("thread started");
