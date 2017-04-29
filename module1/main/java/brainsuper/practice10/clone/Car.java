@@ -13,6 +13,8 @@ public class Car implements Cloneable {
     protected Date manufDate;
     Engine engine = new Engine(2);
 
+    boolean isNewCar = false;
+
     public Car(Date manufDate, int maxSpeed) {
         this.manufDate = manufDate;
         this.maxSpeed = maxSpeed;
@@ -29,5 +31,22 @@ public class Car implements Cloneable {
         Car clonedCar = (Car) super.clone();
         clonedCar.engine = (Engine) this.engine.clone();
         return clonedCar;
+    }
+
+
+    public int getMaxSpeed() {
+        return maxSpeed;
+    }
+
+    public void setMaxSpeed(int maxSpeed) {
+        this.maxSpeed = maxSpeed;
+    }
+
+    public boolean isNewCar() {
+        return isNewCar;
+    }
+
+    public void setNewCar(boolean newCar) {
+        isNewCar = newCar;
     }
 }

@@ -1,11 +1,16 @@
 package brainsuper.practice19;
 
-public class Car implements Comparable<Car> {
-    int year;
-    String model;
-    int price;
-    String nameOfTheOwner;
+import java.io.Serializable;
 
+public class Car implements Comparable<Car>, Serializable {
+   private int year;
+   private String model;
+   private int price;
+   private String nameOfTheOwner;
+   private String color;
+   private int doorsCount;
+   private int wheelsCount;
+   private String type;
 
     public Car(String model, int year) {
         this.model = model;
@@ -19,8 +24,19 @@ public class Car implements Comparable<Car> {
         this.nameOfTheOwner = nameOfTheOwner;
     }
 
+    public Car(CarBuilder carBuilder){
+        this.year=carBuilder.year;
+        this.model=carBuilder.model;
+        this.price=carBuilder.price;
+//        this.doorsCount=carBuilder.doorsCount;
+//        this.wheelsCount=carBuilder.wheelsCount;
+//        this.color=carBuilder.color;
+//        this.type=carBuilder.type;
+        this.nameOfTheOwner=carBuilder.nameOfTheOwner;
 
+    }
 
+    
     //перегрузка метода
     int test(int a, String name) {
         return a - 5;
