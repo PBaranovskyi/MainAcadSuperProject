@@ -17,6 +17,13 @@ public class Car implements Comparable<Car>, Serializable {
         this.year = year;
     }
 
+    public Car(String model, int year, int price) {
+        this.model = model;
+        this.year = year;
+        this.price = price;
+    }
+
+
     public Car(String model, int year, int price, String nameOfTheOwner) {
         this.year = year;
         this.model = model;
@@ -97,6 +104,7 @@ public class Car implements Comparable<Car>, Serializable {
                 "year=" + year +
                 ", model='" + model + '\'' +
                 ", nameOfTheOwner='" + nameOfTheOwner + '\'' +
+                ", price='" + price + '\'' +
                 '}';
     }
 
@@ -107,5 +115,14 @@ public class Car implements Comparable<Car>, Serializable {
         Integer thisCarYear = this.year;
 
         return thisCarYear.compareTo(o.getYear());
+    }
+
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 }

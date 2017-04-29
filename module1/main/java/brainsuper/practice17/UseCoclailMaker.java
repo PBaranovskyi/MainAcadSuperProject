@@ -7,9 +7,16 @@ public class UseCoclailMaker {
 
     public static void main(String[] args) {
 
+
+//        ob = new Object();
         CoctlailMaker<GreenCoctail, Grass> coctlailMakerECO = new CoctlailMaker<>(new GreenCoctail(), new Grass());
 
-        GreenCoctail greenCoctail = coctlailMakerECO.makeCoctail(new Grass());
+        GreenCoctail greenCoctail = coctlailMakerECO.makeCoctail(new CanBeBlended<GreenCoctail>() {
+            @Override
+            public GreenCoctail blend() {
+                return null;
+            }
+        });
 
 //        CoctlailMaker<BananaCoctail, Banana> bananaCoctlailMaker = new CoctlailMaker<>();
 //

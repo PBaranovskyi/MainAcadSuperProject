@@ -58,4 +58,8 @@ public class Car implements Comparable<Car> {
         result = 31 * result + getYearOfManufacture();
         return result;
     }
+
+    public void setMaxSpeed(int maxSpeed) {
+        this.maxSpeed = maxSpeed;
+    }
 }
