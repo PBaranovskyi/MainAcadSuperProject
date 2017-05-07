@@ -1,6 +1,8 @@
 package brainsuper.practice19;
 
 import java.io.Serializable;
+import java.util.Arrays;
+import java.util.List;
 
 public class Car implements Comparable<Car>, Serializable {
    private int year;
@@ -11,16 +13,18 @@ public class Car implements Comparable<Car>, Serializable {
    private int doorsCount;
    private int wheelsCount;
    private String type;
+   private List<String> passengers;
 
     public Car(String model, int year) {
         this.model = model;
         this.year = year;
     }
 
-    public Car(String model, int year, int price) {
+    public Car(String model, int year, int price, String... names) {
         this.model = model;
         this.year = year;
         this.price = price;
+        passengers = Arrays.asList(names);
     }
 
 
@@ -124,5 +128,14 @@ public class Car implements Comparable<Car>, Serializable {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+
+    public List<String> getPassengers() {
+        return passengers;
+    }
+
+    public void addPassanger(String name){
+        passengers.add(name);
     }
 }

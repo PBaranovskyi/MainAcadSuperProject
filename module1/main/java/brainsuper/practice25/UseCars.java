@@ -14,12 +14,26 @@ public class UseCars {
 
     public static void main(String[] args) {
         List<Car> list = new ArrayList<>();
-        list.add(new Car("BMW", 2000, 1000));
-        list.add(new Car("BMW", 1989, 2000));
-        list.add(new Car("OPEL", 2010, 4000));
-        list.add(new Car("Toyota", 2005, 1300));
-        list.add(new Car("Nissan", 2011, 5000));
-        list.add(new Car("Toyota", 2015, 4300));
+        list.add(new Car("BMW", 2000, 1000, "VASYA", "KOLAYA"));
+        list.add(new Car("BMW", 1989, 2000, "MARINA", "OLYA"));
+        list.add(new Car("OPEL", 2010, 4000, "MISHA", "OLYA"));
+        list.add(new Car("Toyota", 2005, 1300, "MISHA", "OLYA"));
+        list.add(new Car("Nissan", 2011, 5000, "MASHA", "NASTYA", "PETYA"));
+        list.add(new Car("Toyota", 2015, 4300, "MISHA", "OLYA"));
+
+
+        List<String> passangers = new ArrayList<>();
+
+        list.forEach((car) -> passangers.addAll(car.getPassengers()));
+
+        System.out.println(passangers);
+
+        boolean isPashaPassenger = list.stream()
+                .flatMap((car) -> car.getPassengers().stream()).anyMatch("PASHA"::equals);
+
+
+        System.out.println("isPashaPassenger " +isPashaPassenger);
+
 
         List<String> models = list.stream()
                 .map((c) -> {
