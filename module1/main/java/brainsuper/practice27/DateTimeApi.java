@@ -1,6 +1,5 @@
 package brainsuper.practice27;
 
-import java.sql.ResultSetMetaData;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAdjusters;
@@ -106,7 +105,6 @@ public class DateTimeApi {
             System.out.println("Will be soon");
         }
 
-        ResultSetMetaData
     }
 
     private static void printTickets(Date date) {
