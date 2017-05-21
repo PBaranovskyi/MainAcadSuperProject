@@ -12,7 +12,6 @@ import java.io.File;
 public class Swing {
 
     public static void main(String[] args) {
-
         JFrame myApp = new JFrame("My button App");
 
 

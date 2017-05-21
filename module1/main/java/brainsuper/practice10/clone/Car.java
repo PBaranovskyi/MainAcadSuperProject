@@ -9,11 +9,19 @@ import java.util.Date;
  * Created by citsym on 12.02.17.
  */
 public class Car implements Cloneable {
-    protected int maxSpeed;
+    protected int maxSpeed = 100;
     protected Date manufDate;
     Engine engine = new Engine(2);
 
     boolean isNewCar = false;
+
+
+    public Car() {
+    }
+
+    public Car( int maxSpeed) {
+        this.maxSpeed = maxSpeed;
+    }
 
     public Car(Date manufDate, int maxSpeed) {
         this.manufDate = manufDate;

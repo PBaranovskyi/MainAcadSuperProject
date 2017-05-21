@@ -65,7 +65,6 @@ public class UseCars {
             System.out.println(car);
         }
 
-
     }
 
 //    private static List<Car> filterHappensHere(List<Car> list, CarFilter filterClass) {

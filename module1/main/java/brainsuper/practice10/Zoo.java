@@ -13,9 +13,12 @@ import static brainsuper.practice12.worldWithoutPolymorfizm.ArraysUtils.addEleme
 public class Zoo {
 
 
-    public static void main(String[] args) {
+    @Max(3)
+    static Animal[] animals = new Animal[0];
 
-        Animal[] animals = new Animal[0];
+
+    public static void main(String[] args) throws InstantiationException, IllegalAccessException {
+
 
 //        animals = addElementToArray(animals, new Animal());
 
@@ -59,6 +62,7 @@ public class Zoo {
 //        new Elephant();
 //
 //        feedAllAnimals(Animal.getAnimals());
+        MaxProcessing.sutUpAnnotations(Zoo.class);
 
     }
 
