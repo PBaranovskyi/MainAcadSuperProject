@@ -2,12 +2,10 @@ package brainsuper.practice31;
 
 import java.io.*;
 
-import static brainsuper.practice31.PermissionUtils.processPermission;
-
 /**
  * Created by citsym on 27.05.17.
  */
-public class FileProcessor {
+public class FileProcessor implements CanRead, CanWrite, ReadWrite {
 
 
     private String filePath;
@@ -19,17 +17,7 @@ public class FileProcessor {
     @MyPermission(PermissionAction.USER_READ)
     public void read(User user) throws NoSuchMethodException {
         System.out.println(user.getName() + "Tries to Read file");
-        processPermission(getClass(), user, "read", this::readFile, User.class);
-    }
-
-    @MyPermission(value = {PermissionAction.USER_CHANGE, PermissionAction.USER_ADMIN})
-    public void write(User user, String lineToWrite) throws NoSuchMethodException {
-        System.out.println(user.getName() + "Tries to write into file");
-        processPermission(getClass(), user, "write", () -> writeFile(lineToWrite), User.class, String.class);
-    }
-
-
-    private void readFile() {
+//        processPermission(getClass(), user, "read", this::readFile, User.class);
         File file = new File(filePath);
         try (InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream(file));
              BufferedReader bufferedReader = new BufferedReader(inputStreamReader)) {
@@ -42,8 +30,9 @@ public class FileProcessor {
         }
     }
 
-
-    private void writeFile(String lineToWrite) {
+    @MyPermission(value = {PermissionAction.USER_CHANGE, PermissionAction.USER_ADMIN})
+    public void write(User user, String lineToWrite) throws NoSuchMethodException {
+        System.out.println(user.getName() + "Tries to write into file");
         File file = new File(filePath);
         try (FileWriter outputStreamWriter = new FileWriter(file);
              BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter)) {
@@ -55,6 +44,7 @@ public class FileProcessor {
         } catch (IOException e) {
             System.out.println("Some exeption while close");
         }
+//        processPermission(getClass(), user, "write", () -> writeFile(lineToWrite), User.class, String.class);
     }
 
 

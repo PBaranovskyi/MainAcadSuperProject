@@ -15,7 +15,7 @@ public class PermissionUtils {
 
         boolean hasPermission = false;
         for (PermissionAction permissionAction : value) {
-            if (user.getPermissions().contains(permissionAction)){
+            if (user.getPermissions().contains(permissionAction)) {
                 hasPermission = true;
             }
         }
@@ -25,6 +25,29 @@ public class PermissionUtils {
             System.out.println("User " + user.getName() + " successfully " + methodName + " file");
         } else {
             System.out.println("User " + user.getName() + " can`t " + methodName + " file");
+        }
+    }
+
+
+    public static boolean processPermission(Class clazz, User user, String methodName, Class... parameters) throws NoSuchMethodException {
+        Method writeMethod = clazz.getDeclaredMethod(methodName, parameters);
+        MyPermission declaredAnnotation = writeMethod.getDeclaredAnnotation(MyPermission.class);
+        PermissionAction[] value = declaredAnnotation.value();
+
+
+        boolean hasPermission = false;
+        for (PermissionAction permissionAction : value) {
+            if (user.getPermissions().contains(permissionAction)) {
+                hasPermission = true;
+            }
+        }
+
+        if (hasPermission) {
+            System.out.println("User " + user.getName() + " successfully " + methodName + " file");
+            return true;
+        } else {
+            System.out.println("User " + user.getName() + " can`t " + methodName + " file");
+            return false;
         }
     }
 
