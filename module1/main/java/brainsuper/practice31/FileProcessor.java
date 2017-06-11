@@ -28,6 +28,7 @@ public class FileProcessor implements CanRead, CanWrite, ReadWrite {
         } catch (IOException e) {
             System.out.println("Some exeption while close");
         }
+        return;
     }
 
     @MyPermission(value = {PermissionAction.USER_CHANGE, PermissionAction.USER_ADMIN})
