@@ -1,6 +1,6 @@
-package brainsuper.singleton;
+package brainsuper.practice34.singleton;
 
-import static brainsuper.singleton.PasswordStorage.PASSWORD_STORAGE_ISTANCE;
+import static brainsuper.practice34.singleton.PasswordStorage.PASSWORD_STORAGE_ISTANCE;
 
 /**
  * Created by citsym on 29.01.17.

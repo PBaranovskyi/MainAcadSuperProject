@@ -1,4 +1,4 @@
-package brainsuper.singleton;
+package brainsuper.practice34.singleton;
 
 import static java.util.Arrays.copyOf;
 

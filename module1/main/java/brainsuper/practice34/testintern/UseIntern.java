@@ -1,4 +1,4 @@
-package brainsuper.testintern;
+package brainsuper.practice34.testintern;
 
 /**
  * Created by citsym on 12.03.17.

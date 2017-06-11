@@ -1,4 +1,4 @@
-package brainsuper.singleton;
+package brainsuper.practice34.singleton;
 
 /**
  * Created by citsym on 29.01.17.
