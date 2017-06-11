@@ -26,8 +26,6 @@ public class PasswordServiceTest {
         // Compare the result
 
 
-
-
     }
 
     @Test
@@ -38,7 +36,6 @@ public class PasswordServiceTest {
         String preparedData = "kslfjsldkfslf";
 
         // Expacted result
-
 
 
         // Execute code
